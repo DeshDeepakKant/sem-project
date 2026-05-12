@@ -129,15 +129,15 @@ May – 2026
 
 ## PREFACE
 
-This project report presents a comprehensive study on the development, evaluation, and deployment of machine learning (ML) models for the prediction and optimization of adsorption capacity of emerging contaminants (ECs) on biochar-based adsorbent materials. The work encompasses two complementary phases: a broad multi-algorithm comparison study conducted on a large literature-derived dataset, and a focused per-biochar modelling pipeline designed to generate material-specific predictive tools and process optimization recommendations.
+This project report presents a study on the development, evaluation, and deployment of machine learning (ML) models for the prediction and optimization of adsorption capacity of emerging contaminants (ECs) on biochar-based adsorbent materials.
 
 The rapid proliferation of emerging contaminants — including pharmaceuticals, personal care products, pesticides, and industrial chemicals — in aquatic environments has emerged as a major environmental and public health concern. Conventional wastewater treatment technologies exhibit limited efficacy in removing trace-level ECs, thereby necessitating the development of advanced, cost-effective remediation strategies. Adsorption using biochar-derived materials has gained considerable attention owing to its high surface area, tunable porosity, and operational flexibility. However, the systematic experimental mapping of adsorption capacity across diverse materials and operating conditions is both time-intensive and resource-demanding.
 
-Machine learning offers a transformative approach to this challenge by enabling data-driven prediction of adsorption capacity directly from input features, bypassing the need for exhaustive laboratory screening. In this work, a dataset comprising 3,757 experimentally reported adsorption data points was compiled and utilized to train, evaluate, and compare ten state-of-the-art ML algorithms. The CatBoost model was identified as the best performer, achieving a test coefficient of determination (R²) of 0.9433. SHAP (SHapley Additive exPlanations) analysis was subsequently applied to quantify and interpret the contribution of individual feature groups to model predictions.
+Machine learning offers a transformative approach to this challenge by enabling data-driven prediction of adsorption capacity directly from input features, bypassing the need for exhaustive laboratory screening. In this work, a dataset comprising 3,757 experimentally reported adsorption data points, compiled from the published literature by Jaffari et al. (2023), was employed as the empirical foundation of the study.
 
-In the second phase, a structured per-biochar modelling pipeline was developed for three specific adsorbent materials — Powdered Activated Carbon (PAC), biochar produced at 600 °C (PB600), and NaOH-activated sugarcane waste biochars (NaOH-SCW) — employing Gaussian Process Regression (GPR), Support Vector Regression (SVR), and Artificial Neural Networks (ANN). Genetic Algorithm (GA) optimization was further applied to identify the operating conditions that maximize adsorption capacity for each material. The developed models were integrated into an interactive Streamlit web application for accessible, real-time prediction.
+A per-biochar modelling pipeline was developed for three specific adsorbent materials — Powdered Activated Carbon (PAC), biochar produced at 600 °C (PB600), and NaOH-activated sugarcane waste biochars (NaOH-SCW) — employing Gaussian Process Regression (GPR), Support Vector Regression (SVR), and Artificial Neural Networks (ANN). Genetic Algorithm (GA) optimization was further applied to identify the operating conditions that maximize adsorption capacity for each material. The developed models were integrated into an interactive Streamlit web application for accessible, real-time prediction.
 
-The findings of this work demonstrate the strong predictive capability of ensemble tree-based models on comprehensive adsorption datasets, and highlight the distinct optimal operating regimes for the three selected biochar materials. This study contributes to the growing field of ML-assisted environmental engineering and provides actionable insights for the design and optimization of biochar-based adsorption systems for EC removal.
+The findings of this work highlight the distinct optimal operating regimes for the three selected biochar materials and demonstrate the feasibility of ML-based adsorption prediction using only five measurable operational input features. This study contributes to the growing field of ML-assisted environmental engineering and provides actionable insights for the design and optimization of biochar-based adsorption systems for EC removal.
 
 ---
 
@@ -170,26 +170,26 @@ Regards,
 
 | **Fig. No.** | **Figure Title** | **Page** |
 |:---|:---|:---:|
-| Fig. 1 | Feature distributions of five operational input variables across PAC, PB600, and NaOH-SCW biochars | 19 |
-| Fig. 2 | Cross-biochar comparison of test R² for GPR, SVR, and ANN models (Phase 2) | 21 |
-| Fig. 3 | Predicted vs Actual adsorption capacity — PAC (GPR, SVR, and ANN; blue = train, red = test) | 25 |
-| Fig. 4 | Residual error distribution histograms — PAC (GPR, SVR, and ANN) | 25 |
-| Fig. 5 | Violin plots of observed vs predicted adsorption capacity — PAC | 26 |
-| Fig. 6 | ANN training and validation loss curves — PAC | 26 |
-| Fig. 7 | Predicted vs Actual adsorption capacity — PB600 (GPR, SVR, and ANN) | 29 |
-| Fig. 8 | Residual error distribution histograms — PB600 (GPR, SVR, and ANN) | 30 |
-| Fig. 9 | Violin plots of observed vs predicted adsorption capacity — PB600 | 30 |
-| Fig. 10 | ANN training and validation loss curves — PB600 | 31 |
-| Fig. 11 | Predicted vs Actual adsorption capacity — NaOH-SCW (GPR, SVR, and ANN) | 33 |
-| Fig. 12 | Residual error distribution histograms — NaOH-SCW (GPR, SVR, and ANN) | 33 |
-| Fig. 13 | Violin plots of observed vs predicted adsorption capacity — NaOH-SCW | 34 |
-| Fig. 14 | ANN training and validation loss curves — NaOH-SCW | 34 |
-| Fig. 15 | R² comparison line plot across all three biochars and three models | 36 |
-| Fig. 16 | Violin error comparison across models and biochars | 37 |
-| Fig. 17 | Combined performance dashboard — all biochars and models | 37 |
-| Fig. 18 | Genetic Algorithm convergence curve — PAC (best fitness vs. generation) | 40 |
-| Fig. 19 | Genetic Algorithm convergence curve — PB600 (best fitness vs. generation) | 41 |
-| Fig. 20 | Genetic Algorithm convergence curve — NaOH-SCW (best fitness vs. generation) | 41 |
+| Fig. 1 | Feature distributions of five operational input variables across PAC, PB600, and NaOH-SCW biochars | — |
+| Fig. 2 | Cross-biochar comparison of test R² for GPR, SVR, and ANN models | — |
+| Fig. 3 | Predicted vs Actual adsorption capacity — PAC (GPR, SVR, and ANN; blue = train, red = test) | — |
+| Fig. 4 | Residual error distribution histograms — PAC (GPR, SVR, and ANN) | — |
+| Fig. 5 | Violin plots of observed vs predicted adsorption capacity — PAC | — |
+| Fig. 6 | ANN training and validation loss curves — PAC | — |
+| Fig. 7 | Predicted vs Actual adsorption capacity — PB600 (GPR, SVR, and ANN) | — |
+| Fig. 8 | Residual error distribution histograms — PB600 (GPR, SVR, and ANN) | — |
+| Fig. 9 | Violin plots of observed vs predicted adsorption capacity — PB600 | — |
+| Fig. 10 | ANN training and validation loss curves — PB600 | — |
+| Fig. 11 | Predicted vs Actual adsorption capacity — NaOH-SCW (GPR, SVR, and ANN) | — |
+| Fig. 12 | Residual error distribution histograms — NaOH-SCW (GPR, SVR, and ANN) | — |
+| Fig. 13 | Violin plots of observed vs predicted adsorption capacity — NaOH-SCW | — |
+| Fig. 14 | ANN training and validation loss curves — NaOH-SCW | — |
+| Fig. 15 | R² comparison line plot across all three biochars and three models | — |
+| Fig. 16 | Violin error comparison across models and biochars | — |
+| Fig. 17 | Combined performance dashboard — all biochars and models | — |
+| Fig. 18 | Genetic Algorithm convergence curve — PAC (best fitness vs. generation) | — |
+| Fig. 19 | Genetic Algorithm convergence curve — PB600 (best fitness vs. generation) | — |
+| Fig. 20 | Genetic Algorithm convergence curve — NaOH-SCW (best fitness vs. generation) | — |
 
 ---
 
@@ -199,20 +199,17 @@ Regards,
 
 | **Table No.** | **Table Title** | **Page** |
 |:---|:---|:---:|
-| Table 1 | Input features used in the machine learning models | 12 |
-| Table 2 | Dataset statistics for the three selected biochar materials | 14 |
-| Table 3 | Summary of ten ML algorithms evaluated in Phase 1 | 19 |
-| Table 4 | Phase 1 model performance comparison (test R² and MAE) | 21 |
-| Table 5 | SHAP feature group importance for CatBoost model | 23 |
-| Table 6 | GPR kernel configuration | 24 |
-| Table 7 | SVR hyperparameter search grid | 25 |
-| Table 8 | ANN architecture and training configuration | 25 |
-| Table 9 | GA optimization parameters | 26 |
-| Table 10 | Phase 2 model performance — PAC | 24 |
-| Table 11 | Phase 2 model performance — PB600 | 28 |
-| Table 12 | Phase 2 model performance — NaOH-SCW | 32 |
-| Table 13 | Cross-biochar best model summary | 35 |
-| Table 14 | GA-optimized conditions and predicted maximum adsorption capacity — all biochars | 39 |
+| Table 1 | Input features used in the machine learning models | — |
+| Table 2 | Dataset statistics for the three selected biochar materials | — |
+| Table 3 | GPR kernel configuration | — |
+| Table 4 | SVR hyperparameter search grid | — |
+| Table 5 | ANN architecture and training configuration | — |
+| Table 6 | GA optimization parameters | — |
+| Table 7 | Model performance — PAC | — |
+| Table 8 | Model performance — PB600 | — |
+| Table 9 | Model performance — NaOH-SCW biochars | — |
+| Table 10 | Cross-biochar best model summary | — |
+| Table 11 | GA-optimized conditions and predicted maximum adsorption capacity — all biochars | — |
 
 ---
 
@@ -234,17 +231,6 @@ Regards,
 | R² | Coefficient of Determination |
 | MAE | Mean Absolute Error (mg g⁻¹) |
 | RMSE | Root Mean Square Error (mg g⁻¹) |
-| SHAP | SHapley Additive exPlanations |
-| BA | Bagging Regressor |
-| CB | CatBoost |
-| DT | Decision Tree Regressor |
-| ET | Extra Trees Regressor |
-| GB | Gradient Boosting Regressor |
-| HGB | HistGradientBoosting Regressor |
-| KNN | K-Nearest Neighbours Regressor |
-| LGBM | LightGBM Regressor |
-| RF | Random Forest Regressor |
-| XGB | XGBoost Regressor |
 | BLX-α | Blend Crossover Operator (Genetic Algorithm) |
 | RBF | Radial Basis Function (kernel) |
 | BN | Batch Normalization |
@@ -264,13 +250,11 @@ Regards,
 
 The ubiquitous occurrence of emerging contaminants (ECs) — encompassing pharmaceuticals, endocrine-disrupting compounds, pesticides, and industrial chemicals — in natural water bodies and wastewater effluents poses serious ecological and human health risks. Among the available remediation technologies, adsorption using biochar-derived materials has demonstrated considerable promise owing to its operational simplicity, high surface area, and environmental compatibility. However, the systematic experimental characterization of adsorption performance across diverse biochar types and operating conditions is laborious and resource-intensive. Machine learning (ML) offers a data-driven alternative that can predict adsorption capacity with high accuracy from experimentally measurable input parameters.
 
-In this study, a dataset comprising 3,757 experimentally reported adsorption data points, compiled from the published literature, was employed to develop and evaluate ML models for the prediction of EC adsorption capacity on biochar materials. In the first phase, ten ML algorithms — Bagging Regressor, CatBoost, Decision Tree, Extra Trees, Gradient Boosting, HistGradientBoosting, K-Nearest Neighbours, LightGBM, Random Forest, and XGBoost — were trained and compared using a comprehensive set of physicochemical, adsorbent characterization, and experimental operating condition features. The CatBoost model achieved the highest predictive accuracy with a test R² of 0.9433 and a mean absolute error (MAE) of 4.95 mg g⁻¹. SHAP (SHapley Additive exPlanations) analysis revealed that adsorption experimental conditions contributed 41% of the total predictive influence, followed by adsorbent composition (35%), adsorbent characterization (20%), and synthesis conditions (3%).
+In this study, a dataset comprising 3,757 experimentally reported adsorption data points, compiled from the published literature by Jaffari et al. (2023), was employed as the empirical foundation. A per-biochar modelling pipeline was developed for three specific adsorbent materials: Powdered Activated Carbon (PAC), biochar produced at 600 °C (PB600), and NaOH-activated sugarcane waste biochars (NaOH-SCW). Gaussian Process Regression (GPR), Support Vector Regression (SVR), and Artificial Neural Networks (ANN) were trained independently for each material using five operational input features: solution pH, adsorption temperature, contact time, initial contaminant concentration, and adsorbent dosage. GPR achieved the highest test R² of 0.7715 for PAC, while ANN delivered the best performance for PB600 (R² = 0.7551) and NaOH-SCW (R² = 0.1757). Genetic Algorithm (GA) optimization, with a population size of 80 and 100 generations, was subsequently applied to identify the operating conditions that maximize predicted adsorption capacity for each biochar. The study further presents an interactive Streamlit web application that integrates all trained models for accessible real-time prediction and result visualization.
 
-In the second phase, a per-biochar modelling pipeline was developed for three specific adsorbent materials: Powdered Activated Carbon (PAC), biochar produced at 600 °C (PB600), and NaOH-activated sugarcane waste biochars (NaOH-SCW). Gaussian Process Regression (GPR), Support Vector Regression (SVR), and Artificial Neural Networks (ANN) were trained independently for each material using five operational input features: solution pH, adsorption temperature, contact time, initial contaminant concentration, and adsorbent dosage. GPR achieved the highest test R² of 0.7715 for PAC, while ANN delivered the best performance for PB600 (R² = 0.7551) and NaOH-SCW (R² = 0.1757). Genetic Algorithm (GA) optimization, with a population size of 80 and 100 generations, was subsequently applied to identify the operating conditions that maximize predicted adsorption capacity for each biochar. The study further presents an interactive Streamlit web application that integrates all trained models for accessible real-time prediction and result visualization.
+The findings demonstrate the feasibility of operational ML-based adsorption prediction using only five measurable input parameters, and reveal distinct optimal operating regimes for each of the three selected biochar materials. The identified optimal conditions are consistent with known adsorption mechanisms and provide a sound basis for experimental validation and process scale-up.
 
-The findings of this work confirm the strong capability of ensemble tree-based models, particularly CatBoost, for large-scale adsorption capacity prediction, and demonstrate the utility of per-material modelling for generating operationally actionable insights. The identified optimal conditions are consistent with known adsorption mechanisms and provide a sound basis for experimental validation and process scale-up.
-
-**Keywords:** Adsorption capacity prediction; Emerging contaminants; Biochar; Machine learning; CatBoost; Gaussian Process Regression; Support Vector Regression; Artificial Neural Network; Genetic Algorithm; SHAP analysis.
+**Keywords:** Adsorption capacity prediction; Emerging contaminants; Biochar; Machine learning; Gaussian Process Regression; Support Vector Regression; Artificial Neural Network; Genetic Algorithm.
 
 ---
 
@@ -293,37 +277,33 @@ The findings of this work confirm the strong capability of ensemble tree-based m
 | **1. Literature Review** | **1** |
 | 1.1 Introduction — The Challenge of Emerging Contaminants in Water | 1 |
 | 1.2 Biochar as an Adsorbent: Properties and Mechanisms | 2 |
-| 1.3 Machine Learning in Adsorption Studies: State of the Art | 3 |
-| 1.4 Ensemble Tree-Based Models for Environmental Engineering | 5 |
-| 1.5 Gaussian Process Regression, SVR, and ANN in Adsorption Prediction | 6 |
-| 1.6 Advantages and Limitations of Data-Driven Adsorption Models | 7 |
-| 1.7 Conclusion of the Literature Review | 8 |
+| 1.3 Machine Learning in Adsorption Studies: State of the Art | 4 |
+| 1.4 Gaussian Process Regression, SVR, and ANN in Adsorption Prediction | 5 |
+| 1.5 Advantages and Limitations of Data-Driven Adsorption Models | 7 |
+| 1.6 Conclusion of the Literature Review | 8 |
 | **2. Materials and Methods** | **9** |
 | 2.1 Dataset Description and Source | 9 |
 | 2.2 Feature Selection and Input Variables | 10 |
 | 2.3 Data Preprocessing | 11 |
-| 2.4 Phase 1 — Multi-Algorithm Comparison | 12 |
-| 2.5 Phase 2 — Per-Biochar Modelling Pipeline | 13 |
-| 2.5.1 Gaussian Process Regression | 14 |
-| 2.5.2 Support Vector Regression | 15 |
-| 2.5.3 Artificial Neural Network | 15 |
-| 2.6 Genetic Algorithm Optimization | 16 |
-| 2.7 Model Evaluation Metrics | 17 |
-| 2.8 Streamlit Deployment | 17 |
-| **3. Results and Discussion** | **18** |
-| 3.1 Exploratory Data Analysis | 18 |
-| 3.2 Phase 1 — Ten-Model Performance Comparison | 20 |
-| 3.3 SHAP Explainability Analysis | 22 |
-| 3.4 Phase 2 — Per-Biochar Model Performance | 24 |
-| 3.4.1 PAC (Powdered Activated Carbon) | 24 |
-| 3.4.2 PB600 (Biochar Produced at 600 °C) | 28 |
-| 3.4.3 NaOH-Activated SCW Biochars | 32 |
-| 3.5 Cross-Biochar Model Comparison | 35 |
-| 3.6 Genetic Algorithm Optimization Results | 38 |
-| 3.7 Streamlit Prediction Application | 43 |
-| **4. Conclusion** | **44** |
-| **5. Future Scope** | **46** |
-| **6. References** | **47** |
+| 2.4 Per-Biochar Modelling Pipeline | 12 |
+| 2.4.1 Gaussian Process Regression | 13 |
+| 2.4.2 Support Vector Regression | 13 |
+| 2.4.3 Artificial Neural Network | 14 |
+| 2.5 Genetic Algorithm Optimization | 15 |
+| 2.6 Model Evaluation Metrics | 16 |
+| 2.7 Streamlit Deployment | 16 |
+| **3. Results and Discussion** | **17** |
+| 3.1 Exploratory Data Analysis | 17 |
+| 3.2 Per-Biochar Model Performance | 19 |
+| 3.2.1 PAC (Powdered Activated Carbon) | 19 |
+| 3.2.2 PB600 (Biochar Produced at 600 °C) | 23 |
+| 3.2.3 NaOH-Activated SCW Biochars | 27 |
+| 3.3 Cross-Biochar Model Comparison | 31 |
+| 3.4 Genetic Algorithm Optimization Results | 34 |
+| 3.5 Streamlit Prediction Application | 39 |
+| **4. Conclusion** | **41** |
+| **5. Future Scope** | **43** |
+| **6. References** | **45** |
 
 ---
 
@@ -351,27 +331,15 @@ Different biochar types exhibit substantially different adsorption capacities fo
 
 ## 1.3 Machine Learning in Adsorption Studies: State of the Art
 
-The application of machine learning (ML) to the prediction of adsorption capacity has expanded rapidly over the past decade, driven by the increasing availability of large, literature-compiled experimental datasets and advances in open-source ML frameworks (Zhu et al., 2022). Data-driven models offer a fundamentally different approach to adsorption prediction compared to mechanistic or empirical models: rather than deriving predictions from physicochemical theory, ML algorithms learn statistical relationships between input features and the target variable directly from training data, enabling them to capture complex, high-dimensional, and potentially non-linear dependencies without requiring explicit model specification.
+The application of machine learning (ML) to the prediction of adsorption capacity has expanded rapidly over the past decade, driven by the increasing availability of large, literature-compiled experimental datasets and advances in open-source ML frameworks. Data-driven models offer a fundamentally different approach to adsorption prediction compared to mechanistic or empirical models: rather than deriving predictions from physicochemical theory, ML algorithms learn statistical relationships between input features and the target variable directly from training data, enabling them to capture complex, high-dimensional, and potentially non-linear dependencies without requiring explicit model specification.
 
-Several studies have demonstrated the effectiveness of ML approaches for adsorption capacity prediction across a variety of adsorbent–adsorbate systems. Singha and Bhakat (2021) employed an artificial neural network (ANN) to predict the adsorption of heavy metals onto modified rice husk, achieving prediction errors below 5%. Jiang et al. (2022) applied random forest (RF) and gradient boosting models to predict the removal efficiency of organic pollutants on biochar, demonstrating that ensemble tree-based models outperform single-tree and linear regression approaches. Zhu et al. (2022) developed a comprehensive ML framework for biochar adsorption of pharmaceuticals, showing that gradient boosting models achieve test R² values in excess of 0.90 when trained on datasets with over 2,000 data points.
+Several studies have demonstrated the effectiveness of ML approaches — including support vector machines, Gaussian processes, and artificial neural networks — for adsorption capacity prediction across a variety of adsorbent–adsorbate systems. These methods share the common advantage of being able to simultaneously accommodate large numbers of heterogeneous input features and capture complex non-linear interactions without requiring prior knowledge of the underlying functional form of the adsorption relationship.
 
-The work by Jaffari et al. (2023), which forms the primary reference for this study, represents one of the most comprehensive ML-based adsorption prediction studies to date. The authors compiled a dataset of 3,757 experimentally reported adsorption data points from the published literature, encompassing a wide range of biochar types, EC compounds, and experimental operating conditions. Ten ML algorithms were systematically trained and compared, and explainability analysis was conducted using SHAP values to quantify feature importance. The CatBoost algorithm was identified as the top performer, achieving a test R² of 0.9433 and a MAE of 4.95 mg g⁻¹, and the results highlighted the dominant role of experimental operating conditions in determining adsorption capacity.
+The work by Jaffari et al. (2023), which provides the dataset used in this study, represents one of the most comprehensive ML-based adsorption prediction studies to date. The authors compiled a dataset of 3,757 experimentally reported adsorption data points from the published literature, encompassing a wide range of biochar types, EC compounds, and experimental operating conditions spanning four feature categories: adsorption experimental conditions, adsorbent composition, adsorbent characterization, and synthesis conditions. This dataset constitutes the empirical foundation of the present work, and the accompanying analysis provides the contextual benchmark for interpreting the per-biochar modelling results developed herein.
 
-The success of ensemble tree-based models in this domain is attributable to several factors. These algorithms are inherently robust to irrelevant or correlated features, capable of capturing non-linear interactions without feature engineering, and relatively insensitive to outliers compared to parametric regression approaches. Furthermore, gradient boosting variants such as XGBoost, LightGBM, and CatBoost incorporate built-in regularization mechanisms that prevent overfitting even in the presence of high-dimensional feature spaces with moderate sample sizes.
+## 1.4 Gaussian Process Regression, SVR, and ANN in Adsorption Prediction
 
-## 1.4 Ensemble Tree-Based Models for Environmental Engineering
-
-Ensemble learning methods combine the predictions of multiple base learners to produce a more accurate and robust composite model than any individual learner alone. The two principal ensemble paradigms — bagging and boosting — differ in the manner in which base models are constructed and combined.
-
-**Bagging** (Bootstrap Aggregating) trains multiple independent base models on bootstrapped subsets of the training data and averages their predictions to reduce variance. The Random Forest algorithm, introduced by Breiman (2001), extends bagging by additionally randomizing the feature subset available to each decision tree at each split, resulting in a diverse ensemble of decorrelated trees. Extra Trees (Extremely Randomized Trees) further randomizes the split threshold selection, generally achieving lower variance at the cost of increased bias.
-
-**Boosting** algorithms train base models sequentially, with each successive learner focusing on the residual errors of its predecessor. Gradient Boosting (Friedman, 2001) constructs the ensemble by iteratively fitting decision trees to the negative gradient of the loss function. XGBoost (Chen and Guestrin, 2016) extends this framework with second-order gradient approximations, regularization terms, and efficient parallelization. LightGBM (Ke et al., 2017) employs histogram-based gradient boosting with leaf-wise tree growth, offering superior computational efficiency on large datasets. CatBoost (Prokhorenkova et al., 2018) introduces symmetric decision trees and an ordered boosting algorithm that eliminates target leakage during training, providing strong generalization performance particularly on datasets with categorical features.
-
-In environmental engineering applications, gradient boosting models have consistently outperformed other algorithm families across a wide range of prediction tasks, including soil contamination modelling, water quality prediction, and adsorption capacity estimation. The ability of these models to implicitly learn feature interactions and their native support for mixed data types (continuous and categorical) make them particularly well-suited to the complex, heterogeneous datasets typical of environmental science applications.
-
-## 1.5 Gaussian Process Regression, SVR, and ANN in Adsorption Prediction
-
-Beyond ensemble tree-based models, three additional algorithm families have been widely applied to adsorption capacity prediction: Gaussian Process Regression (GPR), Support Vector Regression (SVR), and Artificial Neural Networks (ANN). Each offers distinct advantages and limitations that must be carefully considered in the context of the target application.
+Three algorithm families are employed in this study for per-biochar adsorption capacity prediction: Gaussian Process Regression (GPR), Support Vector Regression (SVR), and Artificial Neural Networks (ANN). Each offers distinct advantages and limitations that must be carefully considered in the context of the target application.
 
 **Gaussian Process Regression (GPR)** is a Bayesian non-parametric regression method that models the target function as a realization of a Gaussian process, characterized by a mean function and a covariance (kernel) function (Rasmussen and Williams, 2006). GPR provides not only point predictions but also calibrated uncertainty estimates in the form of predictive standard deviations, a feature of considerable practical value in environmental decision-making. The choice of kernel function governs the assumed smoothness and stationarity of the underlying function; the Radial Basis Function (RBF) kernel combined with a White Noise kernel is commonly employed for adsorption prediction tasks. A known limitation of GPR is its computational complexity, which scales as O(n³) with the number of training samples, rendering it computationally intractable for very large datasets without approximation.
 
@@ -379,15 +347,15 @@ Beyond ensemble tree-based models, three additional algorithm families have been
 
 **Artificial Neural Networks (ANNs)** are flexible, universal function approximators capable of learning arbitrarily complex input–output mappings through the composition of multiple layers of non-linear transformations. Feedforward ANNs with dense (fully connected) hidden layers, trained via backpropagation using the Adam optimizer, have been successfully applied to adsorption capacity prediction across a wide range of adsorbent–adsorbate systems. The incorporation of regularization techniques — including dropout, batch normalization, and early stopping — is essential to prevent overfitting on moderate-sized datasets. ANNs generally require larger training sets than GPR or SVR to achieve comparable generalization, but can capture more complex functional relationships when sufficient data are available.
 
-## 1.6 Advantages and Limitations of Data-Driven Adsorption Models
+## 1.5 Advantages and Limitations of Data-Driven Adsorption Models
 
-Data-driven ML models for adsorption capacity prediction offer several important advantages over conventional empirical and mechanistic approaches. They can simultaneously accommodate a large number of input features spanning multiple physicochemical dimensions — adsorbent properties, adsorbate characteristics, and experimental operating conditions — without requiring the specification of an a priori functional form. They are capable of capturing complex, non-linear, and interactive relationships among variables that are difficult to represent with simple parametric models. Furthermore, when combined with explainability tools such as SHAP, they provide quantitative insights into the relative importance and directional influence of individual features, supporting mechanistic interpretation and guiding experimental design.
+Data-driven ML models for adsorption capacity prediction offer several important advantages over conventional empirical and mechanistic approaches. They can simultaneously accommodate a large number of input features spanning multiple physicochemical dimensions — adsorbent properties, adsorbate characteristics, and experimental operating conditions — without requiring the specification of an a priori functional form. They are capable of capturing complex, non-linear, and interactive relationships among variables that are difficult to represent with simple parametric models. Furthermore, through feature importance analysis, they can provide quantitative insights into the relative contribution of individual input variables, supporting mechanistic interpretation and guiding experimental design.
 
-However, data-driven models are also subject to important limitations. Their predictive accuracy is fundamentally constrained by the quality, representativeness, and completeness of the training data. Models trained on literature-compiled datasets may be subject to publication bias, measurement inconsistencies across laboratories, and incomplete reporting of experimental conditions. Extrapolation beyond the feature space covered by the training data is unreliable, as ML models cannot be expected to learn the correct physical behaviour in regions not represented in their training distribution. Additionally, per-material models trained on small datasets — such as those developed in Phase 2 of this study — may exhibit limited predictive accuracy due to insufficient representation of the full operating space.
+However, data-driven models are also subject to important limitations. Their predictive accuracy is fundamentally constrained by the quality, representativeness, and completeness of the training data. Models trained on literature-compiled datasets may be subject to publication bias, measurement inconsistencies across laboratories, and incomplete reporting of experimental conditions. Extrapolation beyond the feature space covered by the training data is unreliable, as ML models cannot be expected to learn the correct physical behaviour in regions not represented in their training distribution. Additionally, per-material models trained on small datasets — such as those developed in this study — may exhibit limited predictive accuracy due to insufficient representation of the full operating space.
 
-## 1.7 Conclusion of the Literature Review
+## 1.6 Conclusion of the Literature Review
 
-The literature review establishes that biochar-based adsorption is a proven and effective strategy for EC removal from water, and that machine learning offers a powerful framework for predictive modelling of adsorption capacity. Ensemble tree-based models, particularly gradient boosting variants, consistently demonstrate superior performance on large adsorption datasets. GPR, SVR, and ANN provide complementary capabilities — uncertainty quantification, strong small-sample performance, and flexible non-linear modelling, respectively — that are valuable in per-material, data-constrained modelling scenarios. The application of SHAP-based explainability analysis is an important methodological addition that enhances the interpretability and actionability of ML-derived predictions. The present study builds upon this foundation by developing and systematically evaluating a comprehensive two-phase ML framework for EC adsorption capacity prediction, using the dataset of Jaffari et al. (2023) as the empirical basis, and extending the analysis to per-biochar modelling and GA-based process optimization.
+The literature review establishes that biochar-based adsorption is a proven and effective strategy for EC removal from water, and that machine learning offers a powerful framework for predictive modelling of adsorption capacity. GPR, SVR, and ANN provide complementary capabilities — uncertainty quantification, strong small-sample performance, and flexible non-linear modelling, respectively — that are well-suited to per-material, data-constrained modelling scenarios. The present study builds upon this foundation by developing and evaluating a per-biochar ML framework for EC adsorption capacity prediction, using the dataset of Jaffari et al. (2023) as the empirical basis, and extending the analysis to GA-based process optimization and interactive Streamlit deployment.
 
 ---
 
@@ -399,11 +367,11 @@ The literature review establishes that biochar-based adsorption is a proven and 
 
 The dataset employed in this study was compiled from the published scientific literature by Jaffari et al. (2023) and consists of 3,757 experimentally reported adsorption data points covering a wide range of biochar-based adsorbent materials and emerging contaminant types. The data are provided in comma-separated values (CSV) format as `Raw_data.csv`. The dataset encompasses a diverse set of adsorbent types, including activated carbons, pyrolysis-derived biochars, hydrothermally synthesized biochars, and chemically activated biochars, as well as a broad spectrum of EC classes, including antibiotics, anti-inflammatory drugs, pesticides, and industrial chemicals.
 
-For the purposes of Phase 2 modelling, the dataset was filtered to retain only observations corresponding to three specific adsorbent materials: Powdered Activated Carbon (PAC), biochar produced at 600 °C pyrolysis temperature (PB600), and NaOH-activated sugarcane waste biochars (NaOH-SCW). These three materials were selected on the basis of their distinct physicochemical properties — PAC representing a commercially standard high-surface-area adsorbent, PB600 representing a conventional pyrolysis-derived biochar, and NaOH-SCW representing a chemically activated, high-performance material — providing a representative cross-section of the broader adsorbent landscape. The filtered dataset yielded 810 data points in total, distributed across the three materials as summarized in Table 2.
+The dataset was filtered to retain only observations corresponding to three specific adsorbent materials: Powdered Activated Carbon (PAC), biochar produced at 600 °C pyrolysis temperature (PB600), and NaOH-activated sugarcane waste biochars (NaOH-SCW). These three materials were selected on the basis of their distinct physicochemical properties — PAC representing a commercially standard high-surface-area adsorbent, PB600 representing a conventional pyrolysis-derived biochar, and NaOH-SCW representing a chemically activated, high-performance material — providing a representative cross-section of the broader adsorbent landscape. The filtered dataset yielded 810 data points in total, distributed across the three materials as summarized in Table 2.
 
 ## 2.2 Feature Selection and Input Variables
 
-The full dataset contains features spanning four broad categories: experimental operating conditions, adsorbent composition, adsorbent characterization, and synthesis conditions. In Phase 1, the complete feature set was employed to train the ten ML algorithms, enabling the models to leverage all available information. In Phase 2, the feature set was restricted to five operational input variables, as detailed in Table 1, reflecting conditions that can be independently controlled and measured in a laboratory or industrial adsorption experiment without requiring specialized material characterization equipment.
+The feature set was restricted to five operational input variables, as detailed in Table 1, reflecting conditions that can be independently controlled and measured in a laboratory or industrial adsorption experiment without requiring specialized material characterization equipment. This selection is motivated by the practical aim of producing models that are actionable in process design without the need for exhaustive material characterization.
 
 **Table 1: Input features used in the machine learning models**
 
@@ -441,32 +409,11 @@ Data preprocessing was performed using the script `code/01_data_preprocessing.py
 
 The considerable difference in both mean and maximum adsorption capacity between PAC and PB600 reflects the substantially higher surface area and adsorption affinity of activated carbon compared to the non-activated pyrolysis biochar. The NaOH-SCW material, despite being chemically activated, operates in a different concentration and experimental regime than PAC.
 
-## 2.4 Phase 1 — Multi-Algorithm Comparison
+## 2.4 Per-Biochar Modelling Pipeline
 
-In Phase 1, ten ML regression algorithms were trained on the full 3,757-point dataset using the complete feature set. The algorithms evaluated and their implementation details are summarized in Table 3.
+Three ML models — GPR, SVR, and ANN — were trained independently for each of the three target biochar materials. The complete pipeline was orchestrated using `run_pipeline.py`, which sequentially executes the preprocessing, training, plotting, optimization, and reporting scripts. All trained models were saved to `models/<biochar_name>/` for subsequent use in the Streamlit application and GA optimization.
 
-**Table 3: Summary of ten ML algorithms evaluated in Phase 1**
-
-| **Algorithm** | **Abbreviation** | **Library** | **Key Characteristics** |
-|:---|:---:|:---:|:---|
-| Bagging Regressor | BA | scikit-learn | Bootstrap aggregating with decision tree base |
-| CatBoost | CB | catboost | Ordered boosting with symmetric trees |
-| Decision Tree | DT | scikit-learn | Single tree, high interpretability |
-| Extra Trees | ET | scikit-learn | Extreme randomization of splits |
-| Gradient Boosting | GB | scikit-learn | Sequential residual fitting |
-| HistGradientBoosting | HGB | scikit-learn | Histogram-based fast gradient boosting |
-| K-Nearest Neighbours | KNN | scikit-learn | Instance-based non-parametric regression |
-| LightGBM | LGBM | lightgbm | Leaf-wise boosting with GOSS/EFB |
-| Random Forest | RF | scikit-learn | Bagged decorrelated decision trees |
-| XGBoost | XGB | xgboost | Regularized gradient boosting |
-
-All models were trained with their respective default or tuned hyperparameter configurations as implemented in the original paper's codebase. Performance was evaluated on a held-out test set using the coefficient of determination (R²) and mean absolute error (MAE) as primary metrics.
-
-## 2.5 Phase 2 — Per-Biochar Modelling Pipeline
-
-In Phase 2, three ML models — GPR, SVR, and ANN — were trained independently for each of the three target biochar materials. The complete pipeline was orchestrated using `run_pipeline.py`, which sequentially executes the preprocessing, training, plotting, optimization, and reporting scripts. All trained models were saved to `models/<biochar_name>/` for subsequent use in the Streamlit application and GA optimization.
-
-### 2.5.1 Gaussian Process Regression
+### 2.4.1 Gaussian Process Regression
 
 GPR was implemented using the `GaussianProcessRegressor` class from scikit-learn. The kernel function was specified as the sum of a constant kernel, an RBF kernel, and a White Noise kernel, formulated as:
 
@@ -476,11 +423,20 @@ k(x, x') = C · RBF(length_scale = 1.0) + WhiteKernel(noise_level = 1.0)
 
 where C denotes the constant amplitude factor. The kernel hyperparameters — the length scale of the RBF kernel and the noise level of the White Noise kernel — were optimized by maximizing the log marginal likelihood of the training data, employing 5 random restarts of the optimizer to avoid local optima (`n_restarts_optimizer = 5`, `random_state = 42`). Predictions on the test set were accompanied by predictive standard deviations (`return_std = True`), providing uncertainty quantification for each point estimate. The trained GPR model was serialized and saved as `gpr_model.pkl`.
 
-### 2.5.2 Support Vector Regression
+**Table 3: GPR kernel configuration**
 
-SVR was implemented using the `SVR` class from scikit-learn. A systematic hyperparameter search was conducted using `GridSearchCV` with 3-fold cross-validation on the training set, optimizing the coefficient of determination (R²) as the scoring criterion. The search grid is summarized in Table 7.
+| **Component** | **Initial Value** | **Optimized (PAC example)** |
+|:---|:---|:---|
+| Constant kernel (amplitude) | 1.0 | Optimized via marginal likelihood |
+| RBF length scale | 1.0 | Optimized via marginal likelihood |
+| WhiteKernel noise level | 1.0 | Optimized via marginal likelihood |
+| Optimizer restarts | — | 5 |
 
-**Table 7: SVR hyperparameter search grid**
+### 2.4.2 Support Vector Regression
+
+SVR was implemented using the `SVR` class from scikit-learn. A systematic hyperparameter search was conducted using `GridSearchCV` with 3-fold cross-validation on the training set, optimizing the coefficient of determination (R²) as the scoring criterion. The search grid is summarized in Table 4.
+
+**Table 4: SVR hyperparameter search grid**
 
 | **Hyperparameter** | **Values Searched** |
 |:---|:---|
@@ -491,11 +447,11 @@ SVR was implemented using the `SVR` class from scikit-learn. A systematic hyperp
 
 The kernel with the higher test R² was selected as the best SVR model and saved as `svr_model.pkl`.
 
-### 2.5.3 Artificial Neural Network
+### 2.4.3 Artificial Neural Network
 
-The ANN was implemented using TensorFlow/Keras. A feedforward architecture with three hidden layers was employed, as detailed in Table 8.
+The ANN was implemented using TensorFlow/Keras. A feedforward architecture with three hidden layers was employed, as detailed in Table 5.
 
-**Table 8: ANN architecture and training configuration**
+**Table 5: ANN architecture and training configuration**
 
 | **Layer** | **Configuration** |
 |:---|:---|
@@ -513,11 +469,11 @@ The ANN was implemented using TensorFlow/Keras. A feedforward architecture with 
 
 The trained ANN was saved in the Keras native format as `ann_model.keras`.
 
-## 2.6 Genetic Algorithm Optimization
+## 2.5 Genetic Algorithm Optimization
 
-Following model training, a Genetic Algorithm (GA) was applied to each biochar to identify the combination of operating conditions that maximizes the predicted adsorption capacity. The ML model with the highest test R² for the respective biochar was selected as the fitness function evaluator. The GA was implemented from scratch in Python as a custom `GeneticAlgorithm` class, employing the following operators and parameters (Table 9):
+Following model training, a Genetic Algorithm (GA) was applied to each biochar to identify the combination of operating conditions that maximizes the predicted adsorption capacity. The ML model with the highest test R² for the respective biochar was selected as the fitness function evaluator. The GA was implemented from scratch in Python as a custom `GeneticAlgorithm` class, employing the following operators and parameters (Table 6):
 
-**Table 9: GA optimization parameters**
+**Table 6: GA optimization parameters**
 
 | **Parameter** | **Value** |
 |:---|:---|
@@ -532,7 +488,7 @@ Following model training, a Genetic Algorithm (GA) was applied to each biochar t
 
 The search space bounds were derived from the observed minimum and maximum values of each feature in the biochar-specific training data, ensuring that all GA-generated solutions remained within the experimentally observed operating range. The scaler fitted during preprocessing was applied to each candidate solution before prediction, ensuring that the ML model received correctly standardised inputs.
 
-## 2.7 Model Evaluation Metrics
+## 2.6 Model Evaluation Metrics
 
 Model performance was quantified using three standard regression metrics:
 
@@ -544,7 +500,7 @@ Model performance was quantified using three standard regression metrics:
 
 All metrics were computed separately on the training and test sets to assess both model fit and generalization performance.
 
-## 2.8 Streamlit Deployment
+## 2.7 Streamlit Deployment
 
 An interactive web application was developed using the Streamlit framework (version ≥ 1.32.0) and implemented in `app.py`. The application loads all trained model files (`gpr_model.pkl`, `svr_model.pkl`, `ann_model.keras`), scalers, result JSON files, and the combined dataset for each biochar at startup using `@st.cache_resource` to prevent redundant I/O on user interactions. The user interface provides dropdown selection of the target biochar, slider controls for the five input features across their observed operating ranges, and a prediction button that simultaneously queries all three models and displays the predicted adsorption capacity. Additional panels present model performance metrics, predicted-versus-actual scatter plots, GA-optimized conditions, and dataset overview statistics.
 
@@ -576,71 +532,15 @@ The feature distribution analysis (Fig. 1) reveals that the five operational inp
 
 The Pearson correlation analysis reveals moderate positive correlations between initial concentration and adsorption capacity for PAC and NaOH-SCW, consistent with the role of concentration gradient as a thermodynamic driving force for adsorption. pH exhibits a variable and biochar-specific relationship with adsorption capacity, reflecting the dependency of electrostatic surface interactions on the specific pKa values of the EC molecules and the point of zero charge of each adsorbent. Temperature shows a weak positive correlation with capacity for most materials, consistent with the predominantly endothermic nature of physical adsorption processes at the temperatures examined.
 
-## 3.2 Phase 1 — Ten-Model Performance Comparison
+## 3.2 Per-Biochar Model Performance
 
-The performance of ten ML regression algorithms on the full 3,757-point dataset is summarized in Table 4. All algorithms were trained on 80% of the data and evaluated on the remaining 20% held-out test set.
-
-**Table 4: Phase 1 model performance comparison (test R² and MAE)**
-
-| **Rank** | **Model** | **Test R²** | **Test MAE (mg g⁻¹)** |
-|:---:|:---|:---:|:---:|
-| 1 | **CatBoost (CB)** | **0.9433** | **4.95** |
-| 2 | XGBoost (XGB) | 0.9381 | 5.24 |
-| 3 | LightGBM (LGBM) | 0.9367 | 5.38 |
-| 4 | Random Forest (RF) | 0.9298 | 5.71 |
-| 5 | Gradient Boosting (GB) | 0.9241 | 6.02 |
-| 6 | HistGradientBoosting (HGB) | 0.9196 | 6.19 |
-| 7 | Extra Trees (ET) | 0.9143 | 6.44 |
-| 8 | Bagging (BA) | 0.9012 | 6.87 |
-| 9 | K-Nearest Neighbours (KNN) | 0.8634 | 8.21 |
-| 10 | Decision Tree (DT) | 0.8187 | 9.56 |
-
-The results demonstrate a clear hierarchy among the evaluated algorithms, with gradient boosting ensemble methods consistently outperforming other approaches. CatBoost achieved the highest test R² of 0.9433 and the lowest MAE of 4.95 mg g⁻¹, confirming its status as the top-performing model on this dataset — a result consistent with the findings of Jaffari et al. (2023). The ordered boosting algorithm employed by CatBoost, which eliminates target statistics leakage during training, appears to contribute meaningfully to its generalization advantage on this heterogeneous, multi-source dataset.
-
-The remaining gradient boosting variants — XGBoost, LightGBM, Gradient Boosting, and HistGradientBoosting — occupy ranks 2 through 6, collectively demonstrating that the sequential residual fitting paradigm is particularly well-matched to the non-linear, high-dimensional structure of the adsorption dataset. Random Forest, despite employing an independent bagging approach, achieves a competitive test R² of 0.9298, reflecting the inherent flexibility of tree ensembles trained on a large, information-rich dataset. The performance gap between ensemble and single-tree methods is pronounced: the Decision Tree achieves only R² = 0.8187, nearly 13 percentage points below CatBoost, illustrating the well-known tendency of individual decision trees toward high variance on complex regression tasks. It is noteworthy that all ten models achieve test R² values above 0.80, underscoring the feasibility of data-driven adsorption capacity prediction as an operational tool.
-
-&nbsp;
-
-<div align="center">
-
-![Figure 2: Cross-biochar R² comparison](../images/fig02_model_comparison_across_biochars.png)
-
-**Figure 2:** Bar chart comparing test R² values of GPR, SVR, and ANN models across PAC, PB600, and NaOH-activated SCW biochars (Phase 2). GPR leads for PAC; ANN leads for PB600 and NaOH-SCW. The substantially lower performance on NaOH-SCW under the restricted five-feature operational set is clearly visible.
-
-</div>
-
-&nbsp;
-
-## 3.3 SHAP Explainability Analysis
-
-To elucidate the mechanistic basis of the CatBoost model's predictions, SHAP (SHapley Additive exPlanations) analysis was applied to quantify the contribution of individual features to the model's output. SHAP values decompose each prediction into additive contributions from each input feature, grounded in cooperative game theory, and provide both global (dataset-level) and local (instance-level) interpretability.
-
-The SHAP summary analysis revealed the following distribution of predictive influence across four broad feature categories (Table 5):
-
-**Table 5: SHAP feature group importance for CatBoost model**
-
-| **Feature Group** | **Relative Contribution (%)** |
-|:---|:---:|
-| Adsorption experimental conditions | **41** |
-| Adsorbent composition | **35** |
-| Adsorbent characterization | **20** |
-| Synthesis conditions | **3** |
-
-The dominance of adsorption experimental conditions — encompassing pH, temperature, contact time, initial concentration, and adsorbent dosage — as the single most influential feature group (41%) has important implications for process design. This finding confirms that the operational settings of an adsorption experiment exert a greater aggregate influence on the observed adsorption capacity than any other single feature group, including intrinsic material properties. In practical terms, this suggests that careful optimization of operating conditions can compensate, to a significant degree, for sub-optimal material properties — a conclusion with direct relevance to the GA optimization conducted in Phase 2.
-
-Adsorbent composition (35%) ranked second, with features such as elemental nitrogen-to-carbon (N/C) ratio, carbon content (C%), and specific surface area (BET) emerging as the most influential individual descriptors within this group. The N/C ratio modulates the polarity and Lewis basicity of the biochar surface, influencing the strength of π–π and electrostatic interactions with aromatic EC molecules, while BET surface area directly determines the number of available adsorption sites. Adsorbent characterization features (20%) — including pore volume and interlayer spacing — provide additional predictive power beyond composition, reflecting the role of pore architecture in determining accessibility of the adsorbent surface to EC molecules of varying molecular dimensions. The low contribution of synthesis conditions (3%) suggests that, conditional on the resulting adsorbent properties and experimental operating conditions, the synthesis route itself adds relatively little additional predictive information.
-
-The individual feature importance analysis identified the following as the most predictively influential variables: N/C ratio (optimal value: 0.017), BET surface area (~1040 m² g⁻¹), C(%) content (~82.1%), pore volume (~0.46 cm³ g⁻¹), initial EC concentration (100 mg L⁻¹), contaminant type (carbamazepine), adsorption type (single-component), and contact time (720 min).
-
-## 3.4 Phase 2 — Per-Biochar Model Performance
-
-### 3.4.1 PAC (Powdered Activated Carbon)
+### 3.2.1 PAC (Powdered Activated Carbon)
 
 PAC represents a commercially mature, high-surface-area adsorbent produced through the activation of carbonaceous precursors. Its large surface area (typically 500–1500 m² g⁻¹) and well-developed micropore structure render it highly effective for the adsorption of a wide range of organic contaminants. The per-biochar dataset for PAC comprises 162 data points, with the adsorption capacity ranging from 0 to 385.33 mg g⁻¹ (mean: 98.42 mg g⁻¹), reflecting diverse experimental conditions and EC types.
 
-The performance of GPR, SVR, and ANN models on the PAC dataset is summarized in Table 10.
+The performance of GPR, SVR, and ANN models on the PAC dataset is summarized in Table 7.
 
-**Table 10: Phase 2 model performance — PAC**
+**Table 7: Model performance — PAC**
 
 | **Model** | **Train R²** | **Train MAE** | **Train RMSE** | **Test R²** | **Test MAE** | **Test RMSE** | **Time (s)** |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -696,13 +596,13 @@ The predicted-versus-actual scatter plots (Fig. 3) reveal that all three models 
 
 &nbsp;
 
-### 3.4.2 PB600 (Biochar Produced at 600 °C)
+### 3.2.2 PB600 (Biochar Produced at 600 °C)
 
 PB600 is a pyrolysis-derived biochar synthesized through the thermal decomposition of biomass feedstock at 600 °C under an inert atmosphere. Compared to activated carbon, PB600 exhibits a substantially lower surface area and reduced porosity, reflected in the markedly lower adsorption capacity range (0 to 15.86 mg g⁻¹, mean: 5.02 mg g⁻¹). The 162-data-point PB600 dataset presents a more compact prediction target, with the adsorption capacity spanning approximately 20 mg g⁻¹.
 
-The performance of the three models on the PB600 dataset is summarized in Table 11.
+The performance of the three models on the PB600 dataset is summarized in Table 8.
 
-**Table 11: Phase 2 model performance — PB600**
+**Table 8: Model performance — PB600**
 
 | **Model** | **Train R²** | **Train MAE** | **Train RMSE** | **Test R²** | **Test MAE** | **Test RMSE** | **Time (s)** |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -756,13 +656,13 @@ The ANN's superior performance on PB600 can be attributed to the more constraine
 
 &nbsp;
 
-### 3.4.3 NaOH-Activated SCW Biochars
+### 3.2.3 NaOH-Activated SCW Biochars
 
 NaOH-activated sugarcane waste (SCW) biochars represent a class of chemically activated adsorbents with enhanced microporosity and surface functionality relative to non-activated pyrolysis biochars. Chemical activation with NaOH introduces hydroxyl and carboxylate functional groups on the carbon surface, increasing polarity and affinity for polar EC molecules. The NaOH-SCW dataset is the largest of the three, comprising 486 data points with adsorption capacities ranging from 0 to 267.76 mg g⁻¹ (mean: 105.45 mg g⁻¹).
 
-The performance of the three models on the NaOH-SCW dataset is summarized in Table 12.
+The performance of the three models on the NaOH-SCW dataset is summarized in Table 9.
 
-**Table 12: Phase 2 model performance — NaOH-SCW biochars**
+**Table 9: Model performance — NaOH-SCW biochars**
 
 | **Model** | **Train R²** | **Train MAE** | **Train RMSE** | **Test R²** | **Test MAE** | **Test RMSE** | **Time (s)** |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -816,11 +716,11 @@ Several factors contribute to the poor model performance for NaOH-SCW. The 486-p
 
 &nbsp;
 
-## 3.5 Cross-Biochar Model Comparison
+## 3.3 Cross-Biochar Model Comparison
 
-The aggregate performance of GPR, SVR, and ANN across the three biochars is summarized in Table 13 and visualized in Figs. 15–17. The comparison provides a comprehensive view of each algorithm's relative strengths and limitations across different material types and dataset sizes.
+The aggregate performance of GPR, SVR, and ANN across the three biochars is summarized in Table 10 and visualized in Figs. 2 and 15–17. The comparison provides a comprehensive view of each algorithm's relative strengths and limitations across different material types and dataset sizes.
 
-**Table 13: Cross-biochar best model summary**
+**Table 10: Cross-biochar best model summary**
 
 | **Biochar** | **Best Model** | **Test R²** | **Test MAE (mg g⁻¹)** | **Test RMSE (mg g⁻¹)** |
 |:---|:---:|:---:|:---:|:---:|
@@ -828,7 +728,19 @@ The aggregate performance of GPR, SVR, and ANN across the three biochars is summ
 | PB600 | ANN | 0.7551 | 1.08 | 1.43 |
 | NaOH-SCW | ANN | 0.1757 | 43.19 | 48.49 |
 
-The cross-biochar R² comparison reveals that GPR and ANN consistently outperform SVR across all three materials, with GPR superior for PAC and ANN superior for PB600 and NaOH-SCW. This pattern reflects the different sizes and functional complexity of the three datasets: GPR excels in the small-sample, moderate-complexity regime (PAC, 129 training points), where its Bayesian kernel optimization can fit a well-regularized model without overfitting. ANN benefits from its greater architectural flexibility in capturing the more complex, non-linear functional relationships in PB600 and NaOH-SCW.
+The cross-biochar R² comparison (Fig. 2) reveals that GPR and ANN consistently outperform SVR across all three materials, with GPR superior for PAC and ANN superior for PB600 and NaOH-SCW. This pattern reflects the different sizes and functional complexity of the three datasets: GPR excels in the small-sample, moderate-complexity regime (PAC, 129 training points), where its Bayesian kernel optimization can fit a well-regularized model without overfitting. ANN benefits from its greater architectural flexibility in capturing the more complex, non-linear functional relationships in PB600 and NaOH-SCW.
+
+&nbsp;
+
+<div align="center">
+
+![Figure 2: Cross-biochar R² comparison](../images/fig02_model_comparison_across_biochars.png)
+
+**Figure 2:** Bar chart comparing test R² values of GPR, SVR, and ANN models across PAC, PB600, and NaOH-activated SCW biochars. GPR leads for PAC; ANN leads for PB600 and NaOH-SCW. The substantially lower performance on NaOH-SCW under the restricted five-feature operational set is clearly visible.
+
+</div>
+
+&nbsp;
 
 &nbsp;
 
@@ -862,13 +774,13 @@ The cross-biochar R² comparison reveals that GPR and ANN consistently outperfor
 
 &nbsp;
 
-A comparison of Phase 1 (CatBoost, full feature set, full dataset, R² = 0.9433) and Phase 2 (restricted features, per-biochar, R² = 0.77–0.18) highlights the substantial predictive information contributed by adsorbent characterization and composition features. This comparison quantifies the information loss associated with restricting the feature space to operationally accessible variables, and underscores the value of comprehensive material characterization data in ML-based adsorption prediction. Nevertheless, the Phase 2 models provide operational utility precisely because they require only five measurable input parameters — enabling practical process optimization without specialized laboratory characterization.
+The models developed in this study provide operational utility precisely because they require only five measurable input parameters — enabling practical process optimization without specialized laboratory characterization. The modest predictive accuracy relative to models employing full adsorbent characterization features underscores the value of comprehensive material characterization data, and motivates the inclusion of such descriptors in future work.
 
-## 3.6 Genetic Algorithm Optimization Results
+## 3.4 Genetic Algorithm Optimization Results
 
-Following model evaluation, GA optimization was applied to each biochar to identify the operating conditions that maximize predicted adsorption capacity. The best-performing model for each biochar was used as the fitness evaluator: SVR for PAC (test R² = 0.754, marginally selected over GPR) and ANN for PB600 and NaOH-SCW. The GA convergence curves for all three biochars are presented in Figs. 18–20.
+Following model evaluation, GA optimization was applied to each biochar to identify the operating conditions that maximize predicted adsorption capacity. The best-performing model for each biochar was used as the fitness evaluator: SVR for PAC (test R² = 0.754) and ANN for PB600 and NaOH-SCW. The GA convergence curves for all three biochars are presented in Figs. 18–20.
 
-**Table 14: GA-optimized conditions and predicted maximum adsorption capacity — all biochars**
+**Table 11: GA-optimized conditions and predicted maximum adsorption capacity — all biochars**
 
 | **Parameter** | **PAC** | **PB600** | **NaOH-SCW** |
 |:---|:---:|:---:|:---:|
@@ -920,12 +832,12 @@ The NaOH-SCW biochar exhibits a distinct optimal regime: slightly alkaline pH (8
 
 The GA convergence curves (Figs. 18–20) demonstrate rapid initial improvement in the best fitness value during the first 20–30 generations, followed by gradual convergence to a stable optimum over the remaining generations. For all three biochars, the GA achieved apparent convergence within 100 generations, confirming that the selected population size (80) and mutation rate (0.12) provided an adequate balance between exploration and exploitation of the search space.
 
-## 3.7 Streamlit Prediction Application
+## 3.5 Streamlit Prediction Application
 
 To facilitate the practical application of the trained ML models by researchers and practitioners, an interactive web application was developed using the Streamlit framework and integrated with all per-biochar models. The application is launched using:
 
 ```bash
-streamlit run project-ppt/ML_Adsorption_Paper1_Method/app.py
+streamlit run app.py
 ```
 
 The application interface comprises a sidebar panel for biochar selection and feature input, and a main panel providing simultaneous predictions from all three models (GPR, SVR, ANN), accompanied by model performance metrics, predicted-versus-actual visualizations, GA-optimized condition summaries, and dataset overview statistics.
@@ -940,21 +852,17 @@ The application's dark-mode design, with a gradient header and colour-coded mode
 
 # 4. CONCLUSION
 
-This study presents a comprehensive two-phase machine learning framework for the prediction and optimization of emerging contaminant adsorption capacity on biochar-based adsorbents, leveraging a large, literature-compiled dataset of 3,757 experimental observations. The principal findings and conclusions of the study are summarized as follows:
+This study presents a machine learning framework for the prediction and optimization of emerging contaminant adsorption capacity on three biochar-based adsorbents, employing Gaussian Process Regression (GPR), Support Vector Regression (SVR), and Artificial Neural Networks (ANN) on a filtered subset of the large dataset compiled by Jaffari et al. (2023). The principal findings and conclusions are summarized as follows:
 
-**1. Ensemble tree-based models, particularly CatBoost, provide state-of-the-art predictive accuracy for adsorption capacity on the full dataset.** CatBoost achieved a test R² of 0.9433 and a MAE of 4.95 mg g⁻¹, substantially outperforming all other evaluated algorithms. The gradient boosting family consistently occupied the top positions in the model comparison, confirming the suitability of sequential residual fitting for the complex, non-linear structure of adsorption datasets.
+**1. Per-biochar modelling with GPR, SVR, and ANN yields material-specific predictive models with moderate-to-good accuracy for PAC and PB600.** GPR achieved the highest test R² for PAC (0.7715), while ANN led for PB600 (0.7551). The per-biochar approach provides operationally actionable models requiring only five measurable input features, making them accessible for practical process design without specialized material characterization.
 
-**2. SHAP analysis reveals that experimental operating conditions are the dominant driver of adsorption capacity prediction.** The aggregate SHAP contribution of the five operational features (41%) exceeded that of adsorbent composition (35%) and characterization (20%) features, indicating that careful selection and optimization of process conditions can substantially modulate adsorption performance independently of material properties. Individual feature analysis identified N/C ratio, BET surface area, and contaminant type as the most influential non-operational features.
+**2. NaOH-SCW biochars present a challenging prediction target under the restricted operational feature set.** The best model (ANN, R² = 0.176) confirms that five operational features are insufficient to adequately characterize the adsorption behaviour of this chemically complex, highly functionalized material across diverse EC types and experimental conditions. Adsorbate-specific descriptors and adsorbent characterization features are essential for improving predictive accuracy on this material.
 
-**3. Per-biochar modelling with GPR, SVR, and ANN yields material-specific predictive models with moderate-to-good accuracy for PAC and PB600.** GPR achieved the highest test R² for PAC (0.7715), while ANN led for PB600 (0.7551). The per-biochar approach provides operationally actionable models requiring only five measurable input features, making them accessible for practical process design without specialized material characterization.
+**3. Genetic Algorithm optimization identifies distinct and physically interpretable optimal operating conditions for each biochar.** The predicted maximum adsorption capacities of 355.40, 11.66, and 125.48 mg g⁻¹ for PAC, PB600, and NaOH-SCW, respectively, are consistent with the known surface chemistry and adsorption mechanisms of these materials. The acidic optimum for PAC, neutral for PB600, and alkaline for NaOH-SCW reflect the distinctive surface charge characteristics of each adsorbent class.
 
-**4. NaOH-SCW biochars present a challenging prediction target under the restricted operational feature set.** The best model (ANN, R² = 0.176) confirms that five operational features are insufficient to adequately characterize the adsorption behaviour of this chemically complex, highly functionalized material across diverse EC types and experimental conditions. Adsorbate-specific descriptors and adsorbent characterization features are essential for improving predictive accuracy on this material.
+**4. The integrated Streamlit application translates model outputs into an accessible, real-time decision-support tool** for researchers and practitioners seeking to predict adsorption performance and explore optimal operating conditions without specialized ML expertise.
 
-**5. Genetic Algorithm optimization identifies distinct and physically interpretable optimal operating conditions for each biochar.** The predicted maximum adsorption capacities of 355.40, 11.66, and 125.48 mg g⁻¹ for PAC, PB600, and NaOH-SCW, respectively, are consistent with the known surface chemistry and adsorption mechanisms of these materials. The acidic optimum for PAC, neutral for PB600, and alkaline for NaOH-SCW reflect the distinctive surface charge characteristics of each adsorbent class.
-
-**6. The integrated Streamlit application translates model outputs into an accessible, real-time decision-support tool** for researchers and practitioners seeking to predict adsorption performance and explore optimal operating conditions without specialized ML expertise.
-
-Collectively, this work demonstrates the power of data-driven approaches for adsorption capacity prediction and process optimization, and establishes a replicable methodological framework for future studies expanding the scope of ML-based environmental engineering applications.
+Collectively, this work demonstrates the utility of data-driven per-material modelling for adsorption capacity prediction and process optimization, and establishes a replicable methodological framework for future studies expanding the scope of ML-based environmental engineering applications.
 
 ---
 
@@ -964,15 +872,15 @@ Collectively, this work demonstrates the power of data-driven approaches for ads
 
 The present study establishes a solid foundation for ML-based EC adsorption prediction and optimization, but several important avenues for future work remain unexplored:
 
-**1. Expansion of the per-biochar feature set.** Incorporating adsorbent characterization features (BET surface area, pore volume, elemental composition) and adsorbate-specific descriptors (molecular weight, log K_ow, pK_a) into the Phase 2 per-biochar models would be expected to substantially improve predictive accuracy, particularly for NaOH-SCW biochars. The challenge of acquiring these features for new experimental conditions could be addressed through predictive models for material properties.
+**1. Expansion of the feature set.** Incorporating adsorbent characterization features (BET surface area, pore volume, elemental composition) and adsorbate-specific descriptors (molecular weight, log K_ow, pK_a) into the per-biochar models would be expected to substantially improve predictive accuracy, particularly for NaOH-SCW biochars. The challenge of acquiring these features for new experimental conditions could be addressed through predictive models for material properties.
 
-**2. Deep learning architectures for large-scale prediction.** Graph neural networks (GNNs) and attention-based transformer models, applied directly to molecular representations of EC molecules, could enable generalized adsorption prediction across novel contaminant types without requiring manual feature engineering. This would substantially broaden the applicability of the predictive framework beyond the EC classes represented in the current dataset.
+**2. Deep learning architectures for generalized prediction.** Graph neural networks (GNNs) and attention-based transformer models, applied directly to molecular representations of EC molecules, could enable generalized adsorption prediction across novel contaminant types without requiring manual feature engineering. This would substantially broaden the applicability of the predictive framework beyond the EC classes represented in the current dataset.
 
 **3. Multi-objective optimization.** The current GA optimization maximizes adsorption capacity as a single objective. Future work could incorporate secondary objectives such as minimization of adsorbent dosage (material cost), minimization of contact time (operational efficiency), or maximization of regeneration performance, enabling Pareto-optimal trade-off analysis using multi-objective evolutionary algorithms such as NSGA-II or MOEA/D.
 
 **4. Uncertainty quantification for all models.** Only GPR provides native predictive uncertainty estimates in the current implementation. Extending uncertainty quantification to SVR (through conformal prediction) and ANN (through Monte Carlo dropout or deep ensembles) would enable risk-aware decision-making and more meaningful model comparison in terms of calibration as well as accuracy.
 
-**5. Experimental validation of GA-optimized conditions.** The GA-recommended optimal operating conditions for PAC and PB600, identified in this study, should be validated through targeted laboratory experiments to confirm that the predicted capacity improvements are experimentally reproducible. Such validation would close the loop between ML-based optimization and experimental implementation.
+**5. Experimental validation of GA-optimized conditions.** The GA-recommended optimal operating conditions for PAC and PB600 should be validated through targeted laboratory experiments to confirm that the predicted capacity improvements are experimentally reproducible. Such validation would close the loop between ML-based optimization and experimental implementation.
 
 **6. Transfer learning and few-shot adaptation.** For biochar materials with sparse experimental data, transfer learning from models pre-trained on related adsorbents could enable accurate per-material prediction with limited experimental effort, reducing the data requirement for new material characterization.
 
@@ -986,35 +894,17 @@ The present study establishes a solid foundation for ML-based EC adsorption pred
 
 1. Ahmad, M., Rajapaksha, A. U., Lim, J. E., Zhang, M., Bolan, N., Mohan, D., ... & Ok, Y. S. (2014). Biochar as a sorbent for contaminant management in soil and water: a review. *Chemosphere*, **99**, 19–33. https://doi.org/10.1016/j.chemosphere.2013.10.071
 
-2. Breiman, L. (2001). Random forests. *Machine Learning*, **45**(1), 5–32. https://doi.org/10.1023/A:1010933404324
+2. Jaffari, Z. H., Jeong, H., Shin, J., Kwak, J., Son, C., Lee, Y.-G., Kim, S., Chon, K., & Cho, K. H. (2023). Machine-learning-based prediction and optimization of emerging contaminants' adsorption capacity on biochar materials. *Bioresource Technology*, **371**, 128615. https://doi.org/10.1016/j.biortech.2023.128615
 
-3. Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
+3. Lehmann, J., & Joseph, S. (Eds.). (2015). *Biochar for Environmental Management: Science, Technology and Implementation* (2nd ed.). Routledge. https://doi.org/10.4324/9780203762264
 
-4. Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. *The Annals of Statistics*, **29**(5), 1189–1232. https://doi.org/10.1214/aos/1013203451
+4. Mohan, D., Sarswat, A., Ok, Y. S., & Pittman, C. U. (2014). Organic and inorganic contaminants removal from water with biochar, a renewable, low cost and sustainable adsorbent — A critical review. *Bioresource Technology*, **160**, 191–202. https://doi.org/10.1016/j.biortech.2014.01.120
 
-5. Jaffari, Z. H., Jeong, H., Shin, J., Kwak, J., Son, C., Lee, Y.-G., Kim, S., Chon, K., & Cho, K. H. (2023). Machine-learning-based prediction and optimization of emerging contaminants' adsorption capacity on biochar materials. *Bioresource Technology*, **371**, 128615. https://doi.org/10.1016/j.biortech.2023.128615
+5. Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, **12**, 2825–2830.
 
-6. Jiang, W., Luo, S., Wang, Y., Yang, K., & Fu, Z. (2022). Machine learning-based prediction of the adsorption of organic pollutants by biochar. *Journal of Hazardous Materials*, **435**, 128958. https://doi.org/10.1016/j.jhazmat.2022.128958
+6. Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press. http://www.gaussianprocess.org/gpml/
 
-7. Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., ... & Liu, T.-Y. (2017). LightGBM: A highly efficient gradient boosting decision tree. *Advances in Neural Information Processing Systems*, **30**, 3146–3154.
-
-8. Lehmann, J., & Joseph, S. (Eds.). (2015). *Biochar for Environmental Management: Science, Technology and Implementation* (2nd ed.). Routledge. https://doi.org/10.4324/9780203762264
-
-9. Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model predictions. *Advances in Neural Information Processing Systems*, **30**, 4765–4774.
-
-10. Mohan, D., Sarswat, A., Ok, Y. S., & Pittman, C. U. (2014). Organic and inorganic contaminants removal from water with biochar, a renewable, low cost and sustainable adsorbent — A critical review. *Bioresource Technology*, **160**, 191–202. https://doi.org/10.1016/j.biortech.2014.01.120
-
-11. Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, **12**, 2825–2830.
-
-12. Prokhorenkova, L., Gusev, G., Vorobev, A., Dorogush, A. V., & Gulin, A. (2018). CatBoost: Unbiased boosting with categorical features. *Advances in Neural Information Processing Systems*, **31**, 6638–6648.
-
-13. Rasmussen, C. E., & Williams, C. K. I. (2006). *Gaussian Processes for Machine Learning*. MIT Press. http://www.gaussianprocess.org/gpml/
-
-14. Singha, B., & Bhakat, R. K. (2021). Artificial neural network prediction of adsorption of heavy metals from water using biochar. *Environmental Science and Pollution Research*, **28**(4), 4086–4101. https://doi.org/10.1007/s11356-020-10952-4
-
-15. Vapnik, V. (1995). *The Nature of Statistical Learning Theory*. Springer. https://doi.org/10.1007/978-1-4757-2440-0
-
-16. Zhu, X., Li, C., & Xie, X. (2022). Machine learning for the prediction of biochar adsorption of pharmaceutical pollutants. *Science of The Total Environment*, **802**, 149876. https://doi.org/10.1016/j.scitotenv.2021.149876
+7. Vapnik, V. (1995). *The Nature of Statistical Learning Theory*. Springer. https://doi.org/10.1007/978-1-4757-2440-0
 
 ---
 
