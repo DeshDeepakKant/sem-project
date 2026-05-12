@@ -1,0 +1,13 @@
+{
+  "train_metrics": {
+    "R2": 0.7696,
+    "MAE": 26.7336,
+    "RMSE": 34.1634
+  },
+  "test_metrics": {
+    "R2": 0.7715,
+    "MAE": 27.3418,
+    "RMSE": 34.2434
+  },
+  "training_time_seconds": 0.43
+}

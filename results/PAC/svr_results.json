@@ -1,0 +1,19 @@
+{
+  "train_metrics": {
+    "R2": 0.7269,
+    "MAE": 28.6971,
+    "RMSE": 37.1885
+  },
+  "test_metrics": {
+    "R2": 0.754,
+    "MAE": 29.316,
+    "RMSE": 35.5278
+  },
+  "best_params": {
+    "C": "10",
+    "epsilon": "0.01",
+    "gamma": "scale",
+    "kernel": "linear"
+  },
+  "training_time_seconds": 2.74
+}

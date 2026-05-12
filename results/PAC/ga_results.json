@@ -1,0 +1,17 @@
+{
+  "biochar": "PAC",
+  "fitness_model": "SVR",
+  "predicted_max_capacity": 355.396,
+  "optimized_conditions": {
+    "pH": 3.1161,
+    "Temperature": 43.3933,
+    "Contact time": 30.0,
+    "Initial concentration": 97.8817,
+    "Adsorbent dosage": 0.05
+  },
+  "ga_params": {
+    "population": 80,
+    "generations": 100,
+    "mutation_rate": 0.12
+  }
+}

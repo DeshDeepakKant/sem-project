@@ -1,0 +1,17 @@
+{
+  "biochar": "NaOH-activated SCW biochars",
+  "fitness_model": "ANN",
+  "predicted_max_capacity": 125.4817,
+  "optimized_conditions": {
+    "pH": 8.594,
+    "Temperature": 21.6258,
+    "Contact time": 1095.4834,
+    "Initial concentration": 29.6135,
+    "Adsorbent dosage": 0.15
+  },
+  "ga_params": {
+    "population": 80,
+    "generations": 100,
+    "mutation_rate": 0.12
+  }
+}

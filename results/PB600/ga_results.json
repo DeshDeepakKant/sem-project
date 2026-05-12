@@ -1,0 +1,17 @@
+{
+  "biochar": "PB600",
+  "fitness_model": "ANN",
+  "predicted_max_capacity": 11.6556,
+  "optimized_conditions": {
+    "pH": 7.0,
+    "Temperature": 22.8013,
+    "Contact time": 997.0583,
+    "Initial concentration": 6.8562,
+    "Adsorbent dosage": 0.1174
+  },
+  "ga_params": {
+    "population": 80,
+    "generations": 100,
+    "mutation_rate": 0.12
+  }
+}

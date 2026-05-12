@@ -1,0 +1,32 @@
+{
+  "PAC": {
+    "safe_name": "PAC",
+    "total": 162,
+    "train": 129,
+    "test": 33,
+    "target_mean": 98.4224,
+    "target_std": 71.3154,
+    "target_min": 0.0,
+    "target_max": 385.3333
+  },
+  "PB600": {
+    "safe_name": "PB600",
+    "total": 162,
+    "train": 129,
+    "test": 33,
+    "target_mean": 5.0174,
+    "target_std": 2.7143,
+    "target_min": -4.4601,
+    "target_max": 15.8572
+  },
+  "NaOH-activated SCW biochars": {
+    "safe_name": "NaOH_activated_SCW",
+    "total": 486,
+    "train": 388,
+    "test": 98,
+    "target_mean": 105.4521,
+    "target_std": 54.7507,
+    "target_min": 0.0,
+    "target_max": 267.7648
+  }
+}
