@@ -213,7 +213,7 @@ def load_models_for(safe: str):
 
 @st.cache_resource
 def load_scaler_for(safe: str):
-    path = os.path.join(DATA_DIR, f'scaler_{safe}.pkl')
+    path = os.path.join(DATA_DIR, 'processed', f'scaler_{safe}.pkl')
     if os.path.exists(path):
         with open(path, 'rb') as f:
             return pickle.load(f)
@@ -242,7 +242,7 @@ def load_ga_results_for(safe: str):
 
 @st.cache_data
 def load_combined_data():
-    path = os.path.join(DATA_DIR, 'cleaned_combined.csv')
+    path = os.path.join(DATA_DIR, 'processed', 'cleaned_combined.csv')
     if os.path.exists(path):
         return pd.read_csv(path)
     return None
